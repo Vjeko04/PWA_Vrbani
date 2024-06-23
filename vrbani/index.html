@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--
+<?php 
+include 'datum.php'; 
+?>-->
+
+    <head>
+
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="stil.css" /> 
+
+       <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        <script type="text/javascript" src="jquery-1.11.0.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
+        <title>Vrbani Newsroom</title>
+        
+
+    </head>
+
+
+
+
+    <body>
+
+            <header id="header">
+                
+
+                <div id="naslov">
+                    <div id="prvi">
+                        <nav>
+                            <ul>
+                                <li> <button><a href="registracija.php">Log in</a> </button></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <h1>Vrbani novosti</h1><br/><div class="clear"></div>
+                    
+
+                    <nav id="navigacija">
+                        <ul>
+                            <li> <a href="index.html">Početna</a>  </li>
+                            <li> <a href="novosti.php">Novosti</a></li>
+                            <li> <a href="dogadjanja.php">Događanja</a></li>
+                            <li> <a href="registracija.php">Administracija</a></li>
+                        </ul>
+                    </nav>
+
+                
+                </div>
+                    
+
+
+            </header>
+
+
+
+
+        <main id="glavni">
+            <section id="prva">
+                <h2>Novosti</h2><br/>
+                <div class="content">
+
+                    <div class="row">
+                   <?php 
+             
+                     for ($i=0; $i < 3; $i++) { 
+                        echo " 
+                             <article class='col-lg-4 col-sm-4'>
+                               <img src='img/".$vijest_sport[$i][3]."' id='slika1'  alt='add'>
+                               <div>
+                                 <h6>".$vijest_sport[$i][0]."</h6>
+                                 <p> " .$vijest_sport[$i][5]. "<p>
+                               </div>  
+                             </article>"
+                             ;}?>
+                    </div>
+                </div>
+                   
+                  
+                 
+
+            </section><br/><br/>
+            <hr>
+
+            <section id="druga">
+                <h2>Događanja</h2><br/>
+                
+                <div class="content">
+                    <div class="row">
+                        <?php 
+            
+                        for ($i=0; $i < 3; $i++) { 
+                        echo " 
+                            <article class='col-lg-4 col-sm-4'>
+                                <img src='img/".$vijest_kultura[$i][3]."' id='slika1'  alt='add'>
+                                <div>
+                                <h6>".$vijest_kultura[$i][0]."</h6>
+                                </div>  
+                            </article> "
+                            ;} ?>
+                    </div>
+          
+                </div>
+           
+
+            </section>
+
+        
+
+            
+        </main><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+        <div class="clear"></div>
+        <footer id="zadnje">
+            <h3>Vjekoslav Vuković</h3>
+            <h3>vvukovic@tvz.hr</h3>
+            <h3>2024</h3>
+        </footer>
+
+
+
+    </body>
+
+
+
+
+
+    
+
+
+
+</html>
